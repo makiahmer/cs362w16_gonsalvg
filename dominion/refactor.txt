@@ -1,0 +1,11 @@
+Assignment 1 Refactor Summary - Griffin Gonsalves - CS 362 Software Engineering II
+-------------------------------------------------------------------------------
+List of Refactored Functions:
+	adventurer_cardEffect()
+	minion_cardEffect()
+	gardens_cardEffect()
+	greatHall_cardEffect()
+	village_cardEffect()
+	smithy_cardEffect()
+-------------------------------------------------------------------------------
+

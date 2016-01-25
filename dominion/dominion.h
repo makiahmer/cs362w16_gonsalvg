@@ -80,6 +80,12 @@ struct gameState* newGame();
 
 int adventurer_cardEffect(struct gameState *state, int drawntreasure, int cardDrawn, int *temphand, int currentPlayer, int z);
 
+int smithy_cardEffect(struct gameState *state, int currentPlayer, int i, int handPos);
+int gardens_cardEffect();
+int village_cardEffect(struct gameState *state, int currentPlayer, int handPos);
+int minion_cardEffect(struct gameState *state, int currentPlayer, int handPos, int i);
+int greatHall_cardEffect(struct gameState *state, int currentPlayer, int handPos);
+
 int* kingdomCards(int k1, int k2, int k3, int k4, int k5, int k6, int k7,
 		  int k8, int k9, int k10);
 

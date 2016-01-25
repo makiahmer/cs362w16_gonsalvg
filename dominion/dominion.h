@@ -79,7 +79,6 @@ struct gameState {
 struct gameState* newGame();
 
 int adventurer_cardEffect(struct gameState *state, int drawntreasure, int cardDrawn, int *temphand, int currentPlayer, int z);
-
 int smithy_cardEffect(struct gameState *state, int currentPlayer, int i, int handPos);
 int gardens_cardEffect();
 int village_cardEffect(struct gameState *state, int currentPlayer, int handPos);

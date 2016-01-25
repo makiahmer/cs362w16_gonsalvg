@@ -873,7 +873,8 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
       greatHall_cardEffect(state, currentPlayer, handPos);
 
     case minion:
-      minion_cardEffect(state, currentPlayer, handPos, i);
+      minion_cardEffect(state, currentPlayer, handPos, i, j, choice1, choice2);
+      
     case steward:
       if (choice1 == 1)
 	{
@@ -1302,7 +1303,7 @@ int greatHall_cardEffect(struct gameState *state, int currentPlayer, int handPos
    discardCard(handPos, currentPlayer, state, 0);
    return 0;
 }
-int minion_cardEffect(struct gameState *state, int currentPlayer, int handPos, int i){
+int minion_cardEffect(struct gameState *state, int currentPlayer, int handPos, int i, int j, int choice1, int choice2){
    //+1 action
    state->numActions++;
 

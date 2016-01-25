@@ -78,10 +78,10 @@ struct gameState {
 
 struct gameState* newGame();
 
-int adventurer_cardEffect(struct gameState *state, int drawntreasure, int cardDrawn, int* temphand,int currentPlayer, int z){
-  while(drawntreasure<2)
+int adventurer_cardEffect(struct gameState *state, int drawntreasure, int cardDrawn, int *temphand, int currentPlayer, int z){
+  while(drawntreasure < 2)
   {
-     if (state->deckCount[currentPlayer] <1){//if the deck is empty we need to shuffle discard and add to deck
+     if (state->deckCount[currentPlayer] < 1){//if the deck is empty we need to shuffle discard and add to deck
         shuffle(currentPlayer, state);
      }
 

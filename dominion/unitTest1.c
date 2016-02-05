@@ -44,14 +44,28 @@ int gainCard(int supplyPos, struct gameState *state, int toFlag, int player)
   return 0;
 }
 */
-int main (int argc, char** argv) {
+
+int main () {
 	struct gameState testState;
 	//testState->player = 1;
 	int supplyPos = 0;
 	int toFlag= 2;
 	int player = 1;
 	
-	gainCard(supplyPos, testState, toFlag, player);
-	assert(testState->handCount < 5); //assert if the hand we are testing has less than 5 cards in their hand.
+	int preCardGainCount = 0;
+	
+	int k[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, 
+	       sea_hag, tribute, smithy};
+	int r = initializeGame(2, k, 1, &testState);
+	
+	preCardGainCount = testState.handCount[player];
+	gainCard(supplyPos, &testState, toFlag, player);
+	int postCardGainCount = testState.handCount[player];
+	//bug: treasuremap is counted as a supply deck that is counted toward ending the game. 
+	if (postCardGainCount > preCardGainCount) printf("Test player 1's hand being greater than 5.\n");	
+	
+	printf("pre-cardGain call hand size: %d, post: %d.\n", preCardGainCount, postCardGainCount);
+	printf("Test completed successfully\n");
+	
 	return 0;
 }

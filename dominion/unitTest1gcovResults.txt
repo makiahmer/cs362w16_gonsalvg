@@ -1,0 +1,4 @@
+File 'dominion.c'
+Lines executed:17.30% of 578
+dominion.c:creating 'dominion.c.gcov'
+

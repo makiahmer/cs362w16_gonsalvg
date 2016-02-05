@@ -1,0 +1,7 @@
+My unit tests seem to have been successful in their tests, and I even think I 
+discovered a small bug in the isGameOver function. The treasure map isn't coun-
+ted as a supply pile, but the game counts it as a qualifying input for one of
+the three empty supply piles necessary to have the game end. In any case, the
+coverages for the unit tests seemed fairly small, but larger than I expected.
+Most of them were around 20% coverage, which doesn't mean the tests aren't necesarily
+comprehensive but rather more specific. The same goes for the card tests.

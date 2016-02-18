@@ -1,1 +1,9 @@
-1.
+File for Assignment 3
+
+Because I didn't have much experience writing a random test, I tried not to stray
+too far from the example tests. I spent a lot of time wondering why my test was segfaulting
+only to realize that I was attempting to run my code on my bugged-riddled version of
+dominion.c. I ran the tests and got the outputs after running the tests on the master copy
+of the game.
+
+The makefile mostly follows the skeleton file provided for us.

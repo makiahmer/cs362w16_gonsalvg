@@ -1284,7 +1284,7 @@ int gardens_cardEffect(){
 }
 int village_cardEffect(struct gameState *state, int currentPlayer, int handPos){
    //+1 Card
-   drawCard(currentPlayer, state);
+   drawCard(currentPlayer++, state);
 
    //+2 Actions
    state->numActions = state->numActions + 2;

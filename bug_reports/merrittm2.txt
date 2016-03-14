@@ -1,0 +1,29 @@
+/*******************************************************************************************
+** Tester		:	Makiah Merritt
+** Testee		:	Griffin Gonsalves
+** Date Found	:	03/12/2016
+** Severity		:	Negligible
+** Priority		:	Immediate Attention
+** Short Desc.	:	Uninitialized Variables
+*******************************************************************************************/
+
+==== DESCRIPTION ====
+Three uninitialized variables prevent Visual Studio from compiling with this implementation. 
+Although, I believe OSU's flip server would compile with these being uninitialized fixing 
+this bug would also remove the warnings flip would throw.
+
+
+==== CAUSE ====
+Three uninitialized variables.
+
+
+==== IMPACT ====
+Implementation cannot compile in Visual Studio. Obvious implications of unitialized variables
+also hold.
+
+
+==== EXAMPLE TESTER OUTPUT ====
+Severity	Code	Description	Project	File	Line	Suppression State
+Error	C4700	uninitialized local variable 'cardDrawn' used	final_project	c:\users\makiah merritt\dropbox\school\cs 362\dominion\final_project\classmate_implementations\cs362w16_gonsalvg\dominion.c	681	
+Error	C4700	uninitialized local variable 'i' used	final_project	c:\users\makiah merritt\dropbox\school\cs 362\dominion\final_project\classmate_implementations\cs362w16_gonsalvg\dominion.c	825	
+Error	C4700	uninitialized local variable 'j' used	final_project	c:\users\makiah merritt\dropbox\school\cs 362\dominion\final_project\classmate_implementations\cs362w16_gonsalvg\dominion.c	885	

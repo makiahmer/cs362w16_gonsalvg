@@ -1,0 +1,34 @@
+/*******************************************************************************************
+** Tester		:	Makiah Merritt
+** Testee		:	Griffin Gonsalves
+** Date Found	:	03/12/2016
+** Severity		:	High
+** Priority		:	High
+** Short Desc.	:	Segfault - trying to read unaccessible memory.
+*******************************************************************************************/
+
+==== DESCRIPTION ====
+Segfault - Memory read violation. Issue occurs in the discardCard function when it tries to 
+"add card to played pile". Looking at the memory, the invalid access comes from
+an invalid handPos being passed to the function.
+
+
+==== CAUSE ====
+The segfault occurs almost immediatelly when I run my randomtestadventurer.c file with the 
+implmentation. The issue as mentioned in the description is an invalid handPos. How this 
+invalid handPos is being provided so early I'm not sure.
+
+
+==== IMPACT ====
+Program cannot run when this condition is hit.
+
+
+==== EXAMPLE TESTER OUTPUT ====
+VS2015 Output:
+"Exception thrown at 0x011941D4 in final_project.exe: 0xC0000005: Access violation reading 
+location 0x047CD95C."
+
+Variables:
+	Name	Value	Type
+	handPos	18419802	int
++	state->hand[currentPlayer]	0x001897f4 {1, 1, 1, 4, 4, -858993460, -858993460, ...}	int[500]
